@@ -3,7 +3,6 @@
 x = 5
 y = 3
 
-
 print(x == y)  # Igual a
 print(x != y)  # Diferente de
 print(x > y)   # Mayor que

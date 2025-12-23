@@ -1,6 +1,5 @@
 # Operadores de asignacion
 
-
 x = 100    # Asignacion inicial
 x = x + 3  # Asignacion simple
 x += 3     # Asignacion con operador de suma
