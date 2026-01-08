@@ -30,6 +30,13 @@ while j <= 10:
 
 """
 Continue
+
+Continue sirve para saltar una iteracion del bucle si se cumple una condicion
+en este caso, una condicion if
+
+Requiere un else para ...
+
+PENDIENTE EXPLICACION DEL ELSE
 """
 
 k = 0
