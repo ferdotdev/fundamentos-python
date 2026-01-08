@@ -1,19 +1,19 @@
-dia = 'po'
+dia = 'lun'
 
 match dia:
-    case 1:
+    case 'lun':
         print("Hoy es Lunes")
-    case 2:
+    case 'mar':
         print("Hoy es Martes")
-    case 3:
+    case 'mié':
         print("Hoy es Miércoles")
-    case 4:
+    case 'jue':
         print("Hoy es Jueves")
-    case 5:
+    case 'vie':
         print("Hoy es Viernes")
-    case 6:
+    case 'sáb':
         print("Hoy es Sábado")
-    case 7:
+    case 'dom':
         print("Hoy es Domingo")
     case _: # Caso por defecto
         print("Día no válido")
