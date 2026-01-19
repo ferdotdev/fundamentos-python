@@ -31,12 +31,12 @@ while j <= 10:
 """
 Continue
 
-Continue sirve para saltar una iteracion del bucle si se cumple una condicion
-en este caso, una condicion if
+Esta instruccion sirve para saltar una iteracion del bucle si se cumple una condicion
+en este caso, una condicion if, cuando k sea igual a 5, se saltara esa iteracion
+y continuara con la siguiente iteracion del bucle
 
-Requiere un else para ...
-
-PENDIENTE EXPLICACION DEL ELSE
+El else se ejecuta cuando el bucle finalice las iteraciones correctamente, si 
+existe un break, el else no se ejecuta
 """
 
 k = 0
