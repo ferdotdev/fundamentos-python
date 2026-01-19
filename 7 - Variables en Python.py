@@ -1,5 +1,5 @@
 """
-Una variable es una espacio en memoria donde guardamos un valor para usarlo después. 
+Una variable es un espacio en memoria donde guardamos un valor para usarlo después. 
 Con el signo igual (“=” es el operador de asignación) definimos el nombre y asignamos el valor
 
 Consideraciones importantes
