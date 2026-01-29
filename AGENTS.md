@@ -2,7 +2,7 @@
 
 This repo is a collection of small Python scripts and lessons.
 Most files are standalone examples executed directly with Python.
-There is no build system or test runner configured.
+There is no build system, formatter, or test runner configured.
 
 ## Repo overview
 - Primary language: Python
@@ -10,18 +10,19 @@ There is no build system or test runner configured.
 - Execution style: top-level script statements with print output
 - Docs: minimal; only `README.md`
 - Notebook: `7 - Variables en Python.ipynb` exists; avoid editing unless asked
+- No dependency files (`requirements.txt`, `pyproject.toml`, etc.)
 
 ## Commands
-- Build: none (no build step configured)
-- Lint: none (no formatter or linter configured)
+- Build: none
+- Lint: none
 - Tests: none (no pytest/unittest config found)
 - Install deps: none required for standard library scripts
-- If you add tooling, document it here
+- If you add tooling, document it here and update the commands below
 
 ## Running a single test or script
-- Run any example script: `python "15 - Operadores aritmeticos.py"`
-- Run the only test-like file: `python test.py`
-- Use `python3` if `python` is not available: `python3 test.py`
+- Any lesson script: `python "15 - Operadores aritmeticos.py"`
+- Only test-like file: `python test.py`
+- Use `python3` if `python` is unavailable: `python3 test.py`
 - There is no test discovery; each file is executed directly
 - If you add tests, keep them runnable via `python <file>`
 
@@ -34,10 +35,10 @@ python test.py
 
 ## Adding a new lesson script
 - Follow the existing numeric prefix naming pattern
-- Keep the filename readable, even with spaces
+- Keep filenames readable, even with spaces
 - Start with a short module docstring explaining the concept
 - Use simple variables and print output
-- Keep the lesson self contained (no imports unless required)
+- Keep the lesson self-contained (no imports unless required)
 - Add Spanish comments if other lessons nearby use them
 
 ## Code style guidelines
@@ -142,7 +143,7 @@ python test.py
 - Follow the existing teaching style in the nearest related file
 - Prefer clarity over cleverness
 - Ask only if a change would alter lesson intent or output
-- If output changes, explain why in the PR or response
+- If output changes, explain why in the response
 
 ## Suggested workflow for agents
 - Read the target script before editing
