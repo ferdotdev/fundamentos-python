@@ -3,6 +3,8 @@ Listas
 
 Las listas en Python son colecciones ordenadas, que permiten mutabilidad, ademas que permiten
 contener elementos duplicados y de diferentes tipos de datos.
+
+Pueden contener elementos duplicados al igual que las tuplas.
 """
 
 tesla_models = ['Model S', 'Model 3', 'Model X', 'Model Y', 'CyberTruck']
@@ -20,8 +22,15 @@ tesla_models[3] = 'Y'
 
 print('Tesla is', tesla_models)
 
-# Las listas pueden contener elementos de diferentes tipos de datos
-mixed_list = ['Tesla', 'Model', 3, True]
+"""
+Una lista puede contener diferentes tipos de datos como enteros, strings, 
+decimales, booleanos, tuplas, sets y diccionarios, ademas, pueden ser modificados 
+después de su creación.
+"""
+
+mixed_list = [1, "hola", 3.14, True, (1, 2, 3), {1, 2, 3}, {'clave': 'valor'}]
+print(mixed_list)
+print(type(mixed_list))
 
 # Para saber la longitud de una lista se utiliza la función len()
 print(len(mixed_list))
