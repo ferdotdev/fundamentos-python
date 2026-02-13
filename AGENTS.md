@@ -1,155 +1,113 @@
-# AGENTS
+# AGENTS.md - Python Fundamentals Repository
 
-This repo is a collection of small Python scripts and lessons.
-Most files are standalone examples executed directly with Python.
-There is no build system, formatter, or test runner configured.
+## Project Overview
+Educational Python repository with Jupyter notebooks and example scripts teaching Python fundamentals. Content and documentation in Spanish.
 
-## Repo overview
-- Primary language: Python
-- Structure: flat list of lesson scripts in repo root plus `Other/`
-- Execution style: top-level script statements with print output
-- Docs: minimal; only `README.md`
-- Notebook: `7 - Variables en Python.ipynb` exists; avoid editing unless asked
-- No dependency files (`requirements.txt`, `pyproject.toml`, etc.)
+## Build/Test/Lint Commands
 
-## Commands
-- Build: none
-- Lint: none
-- Tests: none (no pytest/unittest config found)
-- Install deps: none required for standard library scripts
-- If you add tooling, document it here and update the commands below
+### No Formal Test Framework
+This is an educational repository without formal test infrastructure.
 
-## Running a single test or script
-- Any lesson script: `python "15 - Operadores aritmeticos.py"`
-- Only test-like file: `python test.py`
-- Use `python3` if `python` is unavailable: `python3 test.py`
-- There is no test discovery; each file is executed directly
-- If you add tests, keep them runnable via `python <file>`
-
-## Command examples
+### Running Code
 ```bash
-python "10 - Manipulacion y conversion de tipos.py"
-python "Other/main.py"
-python test.py
+# Run a Python script
+python "22 - Listas.py"
+
+# Run with the virtual environment
+.venv/bin/python "22 - Listas.py"
+
+# Run Jupyter notebook
+jupyter notebook "10 - Manipulacion y conversion de tipos.ipynb"
 ```
 
-## Adding a new lesson script
-- Follow the existing numeric prefix naming pattern
-- Keep filenames readable, even with spaces
-- Start with a short module docstring explaining the concept
-- Use simple variables and print output
-- Keep the lesson self-contained (no imports unless required)
-- Add Spanish comments if other lessons nearby use them
+### Manual Testing
+- Execute scripts directly to verify output
+- Use print statements for debugging (preferred in this codebase)
+- Run notebooks cell by cell to validate examples
 
-## Code style guidelines
-- Keep scripts short and didactic; avoid heavy abstractions
-- Use clear sequential examples; prints are part of the lesson
-- Preserve existing comments and docstrings; keep explanations in place
-- Prefer Spanish for new instructional text to match current content
-- Avoid adding new dependencies unless the lesson requires them
-- Avoid changing output text unless the lesson intent changes
+## Code Style Guidelines
 
-## Imports
-- Use standard library imports only unless the lesson requires otherwise
-- Put all imports at the top of the file
-- Prefer explicit imports: `import random` or `from datetime import datetime`
-- Group imports in a single block; do not interleave with code
-- Do not leave unused imports
-- Keep import count minimal for learning focus
+### Language & Naming
+- **Language**: Spanish for comments, docstrings, and variable names
+- **Variable names**: snake_case (e.g., `tesla_models`, `lista_frutas`)
+- **File names**: Descriptive with number prefixes for ordering (e.g., `22 - Listas.py`)
+- **Constants**: UPPER_SNAKE_CASE for true constants
 
-## Formatting
-- Indent with 4 spaces
-- Keep blank lines between logical sections
-- Keep lines reasonably short (around 88-100 chars) when practical
-- Use f-strings for formatted output
-- Use single or double quotes consistently within a file
-- Do not reformat existing examples unless necessary for the change
-- Avoid trailing whitespace
+### Code Structure
+- Use descriptive variable names in Spanish
+- Single quotes for strings: `'hola'` (preferred over double quotes)
+- No type hints (this is a fundamentals repo)
+- No complex error handling (keep it beginner-friendly)
+- Use docstrings with `"""` for module/file documentation
 
-## Docstrings and comments
-- Many lessons start with a module docstring; keep it if present
-- Use docstrings for lesson context, comments for inline explanations
-- Keep comments short, clear, and aligned with the code they explain
-- Avoid redundant comments that repeat the code
-- If adding a new lesson, include a short module docstring
-- Keep comment language consistent with the file
-- Avoid large comment blocks that read like essays
+### Formatting
+- Indentation: 4 spaces
+- Maximum line length: ~100 characters (flexible)
+- One blank line between logical sections
+- No trailing spaces
 
-## Naming
-- Variables: `snake_case`, descriptive (e.g., `decimal_negativo`)
-- Functions: `snake_case` verbs (e.g., `is_even`, `handle_command`)
-- Constants: `UPPER_CASE` only if you introduce them
-- Short names are OK for math examples (`a`, `b`, `x`, `y`)
-- Avoid shadowing builtins (`sum`, `list`, `dict`) in new code
-- Avoid single-letter names outside math examples
-- Keep Spanish variable names consistent within a file
+### Imports
+- Prefer no imports for basic examples
+- When needed, use standard library only (no third-party deps)
+- Group imports: stdlib first, then local (though rare in this repo)
+- No wildcard imports (`from module import *`)
 
-## Types
-- Type hints are not used in the current code; avoid adding them by default
-- If a lesson explicitly teaches typing, keep hints simple and minimal
-- Use built-in types in comments or print output when needed
-- Avoid introducing typing-only imports
-- Prefer straightforward values over complex type tricks
-- Do not add runtime type checking unless the lesson is about it
+### Comments
+- Use `#` for inline comments
+- Explain the "why" not just the "what"
+- Comments should be in Spanish
+- Example:
+  ```python
+  # Para acceder a un elemento se utiliza el indice
+  print(tesla_models[4])
+  ```
 
-## Control flow and functions
-- Keep control flow explicit (`if`/`elif`/`else` over clever expressions)
-- Prefer simple loops that show the concept
-- Functions are small and focused; keep them easy to read
-- Avoid lambda-heavy or functional patterns unless teaching them
-- When showing dictionaries of callables, keep keys simple strings
-- Avoid deeply nested blocks unless the lesson requires it
+### Documentation Style
+- Module-level docstrings explain the concept being taught
+- Use triple double quotes: `"""`
+- Include brief explanations of Python concepts
 
-## Error handling
-- Only add try/except when the lesson needs it
-- Catch specific exceptions (e.g., `ZeroDivisionError`)
-- Explain errors with a short print message
-- Avoid bare `except` and avoid swallowing errors silently
-- `pass` is acceptable only when teaching control flow
-- Do not introduce logging frameworks
-- Do not use custom exception types unless teaching them
+## Error Handling
+- Keep error handling minimal for educational clarity
+- Use simple conditionals instead of try/except where possible
+- Example:
+  ```python
+  if 'elemento' in mi_lista:
+      print('Encontrado')
+  ```
 
-## Data and I/O
-- Use in-memory examples; avoid file I/O unless required by lesson
-- Use `print()` to show results and reinforce the concept
-- Keep input prompts simple and explicit when used
-- Do not add network calls or external services
-- Keep randomness deterministic only if the lesson needs repeatability
-- Avoid writing files during examples
+## Jupyter Notebooks
+- Clear output before committing: Kernel > Restart & Clear Output
+- Keep cells focused on single concepts
+- Use markdown cells for explanations in Spanish
 
-## File organization
-- Lessons live in the repo root and are named with numeric prefixes
-- Additional examples live under `Other/`
-- Keep new lesson files consistent with existing naming style
-- Do not rename existing lesson files unless explicitly requested
-- Keep related examples grouped in the same file when possible
-- Avoid moving files between folders without a reason
+## Git Workflow
+```bash
+# Check what's excluded
+cat .gitignore
 
-## Editing guidance
-- Make minimal changes needed to satisfy the request
-- Do not refactor unrelated examples
-- Preserve output semantics; changing print output is a breaking change
-- Keep top-level code at module scope (no main guard unless requested)
-- Do not reorder statements unless it improves the teaching flow
-- Avoid introducing global state changes across files
-- Keep edits in the smallest number of files possible
+# Current exclusions: .env, .venv/, node_modules/, *.log, *.tmp, .DS_Store, /Other, test.py, test.ipynb
+```
 
-## Cursor and Copilot rules
-- No `.cursor/rules/` directory found
-- No `.cursorrules` file found
-- No `.github/copilot-instructions.md` found
+## Virtual Environment
+Located at `.venv/`. Use it when testing code:
+```bash
+source .venv/bin/activate  # Linux/Mac
+# or
+.venv\Scripts\activate     # Windows
+```
 
-## When unsure
-- Follow the existing teaching style in the nearest related file
-- Prefer clarity over cleverness
-- Ask only if a change would alter lesson intent or output
-- If output changes, explain why in the response
+## Key Patterns from Existing Code
+- Lists: `mi_lista = ['a', 'b', 'c']`
+- Tuples: `mi_tupla = ('a', 'b', 'c')`
+- Sets: `mi_set = {'a', 'b', 'c'}`
+- Dictionaries: `mi_dict = {'clave': 'valor'}`
+- Loops: `for item in coleccion:`
+- Conditionals: `if 'x' in lista:`
 
-## Suggested workflow for agents
-- Read the target script before editing
-- Keep edits localized to the relevant example
-- Run the edited script with `python <file>` to validate output
-- If adding a new lesson, include a short module docstring
-- Update `README.md` only if the user explicitly asks
-- Summarize changes with file paths for quick review
-- Mention any commands you ran and their result
+## When Adding New Content
+1. Number prefix for ordering: `XX - Nombre Descriptivo.py`
+2. Focus on one concept per file
+3. Include practical examples
+4. Use print statements to show output
+5. Keep examples runnable independently
